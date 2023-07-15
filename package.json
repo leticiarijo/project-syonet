@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npx cypress open"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leticiarijo/project-syonet.git"
@@ -19,5 +20,11 @@
   "devDependencies": {
     "cypress": "^12.17.1",
     "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha": "^10.2.0",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
