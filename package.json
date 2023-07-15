@@ -1,0 +1,23 @@
+{
+  "name": "project-syonet",
+  "version": "1.0.0",
+  "description": "Desafio de Teste Automatizado",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leticiarijo/project-syonet.git"
+  },
+  "author": "Leticia Rijo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leticiarijo/project-syonet/issues"
+  },
+  "homepage": "https://github.com/leticiarijo/project-syonet#readme",
+  "devDependencies": {
+    "cypress": "^12.17.1",
+    "mochawesome": "^7.1.3"
+  }
+}
