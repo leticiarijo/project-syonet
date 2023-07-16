@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-15T23:34:43.165Z",
+    "end": "2023-07-15T23:34:56.584Z",
+    "duration": 13419,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b3fca993-931e-4671-988b-b84f9d41092d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\FormAuthentication.cy.js",
+      "file": "cypress\\e2e\\FormAuthentication.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbeff8ff-7496-4c3c-ae81-2e98e17b0315",
+          "title": "Form Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login success",
+              "fullTitle": "Form Authentication Login success",
+              "timedOut": null,
+              "duration": 4695,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.AccessTheInternet();\ncy.get('li a[href=\"/login\"]').click();\ncy.fixture('dados').then(dados => {\n  cy.get(\"#username\").type(dados.login.user);\n  cy.get(\"#password\").type(dados.login.password, {\n    log: false\n  });\n});\ncy.get('button.radius').contains(\"Login\").click();\ncy.url().should('eq', 'https://the-internet.herokuapp.com/secure');\ncy.contains(\" You logged into a secure area! \");",
+              "err": {},
+              "uuid": "6841c6b3-7154-440b-9178-c4f226bac775",
+              "parentUUID": "fbeff8ff-7496-4c3c-ae81-2e98e17b0315",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login failed - Incorrect password",
+              "fullTitle": "Form Authentication Login failed - Incorrect password",
+              "timedOut": null,
+              "duration": 2396,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.AccessTheInternet();\ncy.get('li a[href=\"/login\"]').click();\ncy.fixture('dados').then(dados => {\n  cy.get(\"#username\").type(dados.login.user);\n});\ncy.get(\"#password\").type('passwordfake');\ncy.get('button.radius').contains(\"Login\").click();\ncy.url().should('eq', 'https://the-internet.herokuapp.com/login');\ncy.contains(\" Your password is invalid! \");",
+              "err": {},
+              "uuid": "e9256550-4a56-48ea-880a-b429d69b1f87",
+              "parentUUID": "fbeff8ff-7496-4c3c-ae81-2e98e17b0315",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login failed - Incorrect user",
+              "fullTitle": "Form Authentication Login failed - Incorrect user",
+              "timedOut": null,
+              "duration": 2341,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.AccessTheInternet();\ncy.get('li a[href=\"/login\"]').click();\ncy.get(\"#username\").type('userFaker');\ncy.fixture('dados').then(dados => {\n  cy.get(\"#password\").type(dados.login.password, {\n    log: false\n  });\n});\ncy.get('button.radius').contains(\"Login\").click();\ncy.url().should('eq', 'https://the-internet.herokuapp.com/login');\ncy.contains(\" Your username is invalid! \");",
+              "err": {},
+              "uuid": "d5a3dddb-8589-4ddb-966f-3aa9bdb98f95",
+              "parentUUID": "fbeff8ff-7496-4c3c-ae81-2e98e17b0315",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6841c6b3-7154-440b-9178-c4f226bac775",
+            "e9256550-4a56-48ea-880a-b429d69b1f87",
+            "d5a3dddb-8589-4ddb-966f-3aa9bdb98f95"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9432,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

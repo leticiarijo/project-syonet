@@ -1,4 +1,4 @@
-describe.only('Dynamic Loading', () => {
+describe('Dynamic Loading', () => {
         
     before(() => {
         cy.AccessTheInternet()
